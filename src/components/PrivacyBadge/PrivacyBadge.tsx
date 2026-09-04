@@ -4,7 +4,7 @@ import { EyeOff, Eye, Lock } from 'lucide-react';
 import type { PrivacyBadgeProps } from './PrivacyBadge.types';
 
 
-const PrivacyBadge: React.FC<PrivacyBadgeProps> = ({
+export const PrivacyBadge: React.FC<PrivacyBadgeProps> = ({
     sensitiveNumber,
     label,
     maskPattern = 'last4' }) => {
