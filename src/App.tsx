@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {  CurrencyCounter } from "./components/CurrencyCounter";
 import { PrivacyBadge } from "./components/PrivacyBadge";
+import { DebouncedSearch } from "./components/DebouncedSearch";
 
 export default function App() {
   const [balance, setBalance] = useState(124500.5);
@@ -25,6 +26,12 @@ export default function App() {
       >
         Simulate Deposit (+₹15,000.25)
       </button>
+
+      <DebouncedSearch
+        placeholder="Search for something..."
+        onSearch={(query) => console.log("Searching for:", query)}
+        enableShortcut={true}
+      />
     </div>
   );
 }
